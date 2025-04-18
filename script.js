@@ -18,7 +18,7 @@ let grid;
 // }
 
 
-
+button.addEventListener("click", resizeGrid);
 
 function resizeGrid () {
     while (true) {
