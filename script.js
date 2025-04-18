@@ -1,24 +1,31 @@
 // Javascript File
 const container = document.querySelector('#container');
-const button = document.querySelector("button");
+const gridButton = document.querySelector("#gridButton");
+const resetButton = document.querySelector('#resetButton');
 let sizeInput;
 let size;
 let maxNumber = 100;
 let grid;
+let div;
 
-// for (i=0;i < 256; i++) {
-//     const div = document.createElement('div');
-//     div.className = "grid";
+for (i=0;i < 4096; i++) {
+    const div = document.createElement('div');
+    div.className = "grid";
 
-//     container.appendChild(div);
+    container.appendChild(div);
 
-//     div.addEventListener('mouseover', () => {
-//         div.style.backgroundColor = "blue";
-//     })
-// }
+    div.addEventListener('mouseover', () => {
+        div.style.backgroundColor = "blue";
+    })
+}
 
 
-button.addEventListener("click", resizeGrid);
+gridButton.addEventListener("click", resizeGrid);
+resetButton.addEventListener("click",reset);
+
+function reset () {
+    window.location.reload();
+}
 
 function resizeGrid () {
     while (true) {
