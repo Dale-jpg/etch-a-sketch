@@ -9,7 +9,6 @@ for (i=0;i < 256; i++) {
 
     div.addEventListener('mouseover', () => {
         div.style.backgroundColor = "blue";
-    
     })
 }
 
